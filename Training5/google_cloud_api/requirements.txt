@@ -1,0 +1,4 @@
+google-cloud-vision
+google-cloud-speech
+pyaudio
+wave

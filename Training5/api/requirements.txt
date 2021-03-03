@@ -1,0 +1,14 @@
+fastapi
+uvicorn
+google-cloud-vision
+opencv-python
+tqdm
+matplotlib
+pandas
+torch
+torchvision
+seaborn
+python-multipart
+Jinja2
+aiofiles
+werkzeug
