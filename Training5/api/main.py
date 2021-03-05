@@ -1,6 +1,7 @@
 import os
 import shutil
 
+import uvicorn
 from fastapi import FastAPI, File, Request, UploadFile
 from fastapi.staticfiles import StaticFiles
 from fastapi.templating import Jinja2Templates
@@ -71,3 +72,6 @@ async def predict_image(request: Request, file: UploadFile = File(...)):
             "filepath": "/" + os.path.join(output_path, filename),
         },
     )
+
+if __name__ == '__main__':
+    uvicorn.run(app, host='0.0.0.0', port=8000)
