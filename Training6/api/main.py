@@ -1,4 +1,3 @@
-import io
 import os
 import shutil
 
@@ -6,8 +5,7 @@ import uvicorn
 from fastapi import Depends, FastAPI, File, Request, UploadFile
 from fastapi.security import OAuth2PasswordBearer
 from fastapi.staticfiles import StaticFiles
-from PIL import Image
-from starlette.responses import FileResponse, StreamingResponse
+from starlette.responses import FileResponse
 from werkzeug.utils import secure_filename
 
 from detect import detect

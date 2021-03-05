@@ -1,5 +1,6 @@
 fastapi
 uvicorn
+google-cloud-vision
 opencv-python
 tqdm
 matplotlib
