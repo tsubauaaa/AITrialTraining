@@ -1,7 +1,7 @@
 ## 課題4
 Amazonレビュー(英語)を製品カテゴリーごとに要約を作成して、要約のトークン頻度を評価の高いもの、低いもので可視化し、傾向をつかむプログラム
 
-### create_sammary.ipynb
+### create_summary.ipynb
 transformersでAmazonレビュー(英語)の要約をtxt出力する
 
 ### AITraining4.ipynb
