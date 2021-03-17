@@ -1,0 +1,15 @@
+{
+    "model_name_or_path": "facebook/bart-large-xsum",
+    "text_column": "review_body",
+    "summary_column": "review_body",
+    "prefix": " ",
+    "max_source_length": 1024,
+    "ignore_pad_token_for_loss": true,
+    "pad_to_max_length": true,
+    "max_target_length": 128,
+    "val_max_target_length": 128,
+    "predict_with_generate": true,
+    "overwrite_cache": false,
+    "output_dir": "./",
+    "test_file": "request_body.json"
+}
