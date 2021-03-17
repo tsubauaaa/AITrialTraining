@@ -8,7 +8,7 @@ Animal10の画像分類をResNet18とVGG16のfine tuningを行い、両者の学
 ### show_diff.py
 ResNet18とVGG16から作成した学習モデルの推論結果を取得する
 
-### operation.ipynb
+### AITraining8.ipynb
 学習データの展開、compare_models.pyの実行、show_diffの実行をSageMaker Notebookインスタンス上で行うコマンド
 
 ### diff_result
