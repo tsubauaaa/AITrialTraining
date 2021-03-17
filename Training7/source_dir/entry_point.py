@@ -21,7 +21,8 @@ logger.setLevel(logging.DEBUG)
 logger.addHandler(logging.StreamHandler(sys.stdout))
 
 MAX_LEN = 62
-
+logger.info(f"CURRENT DIR: {os.path.dirname(__file__)}")  # /opt/ml/model/code/
+logger.info(f"FILES in CURRENT DIR: {os.listdir()}")
 logger.info("Loading BERT tokenizer...")
 tokenizer = AutoTokenizer.from_pretrained(
     "facebook/bart-large-xsum", do_lower_case=True
@@ -277,12 +278,14 @@ def _preprocess_function(examples):
 
 
 def model_fn(model_dir):
+    logger.info("Proccessing model_fn...")
     device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
     model = AutoModelForSeq2SeqLM.from_pretrained("facebook/bart-large-xsum")
     return model.to(device)
 
 
 def input_fn(request_body, request_content_type):
+    logger.info("Proccessing input_fn...")
     """An input_fn that loads a pickled tensor"""
     if request_content_type == "application/json":
         data = json.loads(request_body)
@@ -303,15 +306,21 @@ def input_fn(request_body, request_content_type):
             "product_category": "",
         }
 
-        with open("request_body.json", mode="wt", encoding="utf-8") as file:
+        with open(
+            os.path.dirname(__file__) + "/request_body.json",
+            mode="wt",
+            encoding="utf-8",
+        ) as file:
             json.dump(test_file, file, ensure_ascii=False, indent=2)
 
         parser = HfArgumentParser(
             (ModelArguments, DataTrainingArguments, Seq2SeqTrainingArguments)
         )
         model_args, data_args, training_args = parser.parse_json_file(
-            json_file=os.path.abspath("./config.json")
+            json_file=os.path.dirname(__file__) + "/args.json"
         )
+
+        logger.info(f"training=args: {training_args}")
 
         # dataset = Dataset.from_dict(data)
         data_files = {}
@@ -345,11 +354,12 @@ def input_fn(request_body, request_content_type):
 
 
 def predict_fn(input_data, model):
+    logger.info("Proccessing predict_fn...")
     parser = HfArgumentParser(
         (ModelArguments, DataTrainingArguments, Seq2SeqTrainingArguments)
     )
     model_args, data_args, training_args = parser.parse_json_file(
-        json_file=os.path.abspath("./config.json")
+        json_file=os.path.dirname(__file__) + "/args.json"
     )
     device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
     model = model.to(device)
@@ -386,5 +396,4 @@ def predict_fn(input_data, model):
 
 
 if __name__ == "__main__":
-
     pass
