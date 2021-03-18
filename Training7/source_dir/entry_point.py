@@ -21,6 +21,7 @@ logger.setLevel(logging.DEBUG)
 logger.addHandler(logging.StreamHandler(sys.stdout))
 
 MAX_LEN = 62
+WRITABLE_DIR = "/opt/ml/"
 logger.info(f"CURRENT DIR: {os.path.dirname(__file__)}")  # /opt/ml/model/code/
 logger.info(f"FILES in CURRENT DIR: {os.listdir()}")
 logger.info("Loading BERT tokenizer...")
@@ -307,7 +308,7 @@ def input_fn(request_body, request_content_type):
         }
 
         with open(
-            os.path.dirname(__file__) + "/request_body.json",
+            WRITABLE_DIR + "request_body.json",
             mode="wt",
             encoding="utf-8",
         ) as file:
@@ -335,7 +336,6 @@ def input_fn(request_body, request_content_type):
             _preprocess_function,
             batched=True,
             num_proc=None,
-            # remove_columns=["review_body"],
             remove_columns=[
                 "review_id",
                 "product_id",
@@ -351,6 +351,7 @@ def input_fn(request_body, request_content_type):
         logger.info(f"test_dataset: {test_dataset}")
 
         return test_dataset
+    raise ValueError(f"Unsupported content type: {request_content_type}")
 
 
 def predict_fn(input_data, model):

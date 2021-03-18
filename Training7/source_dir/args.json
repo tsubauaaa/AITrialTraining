@@ -11,5 +11,5 @@
     "predict_with_generate": true,
     "overwrite_cache": false,
     "output_dir": "./",
-    "test_file": "/opt/ml/model/code/request_body.json"
+    "test_file": "/opt/ml/request_body.json"
 }
