@@ -1,4 +1,6 @@
 ## 課題7
+SageMakerにテキスト要約の独自モデル(transformersのAutoModelForSeq2SeqLM)をデプロイして、リクエストする。
+
 
 ### source_dir/entry_point.py
 transformersのAutoModelForSeq2SeqLMを用いて、リクエストされたAmazonレビューテキスト(英語)を要約して返却する。SageMaker推論エンドポイントで実行されるように必要な関数が書かれている
