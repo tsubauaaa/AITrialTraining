@@ -1,0 +1,55 @@
+[2021-03-22 03:05:32,472][utils.torch_utils][INFO] - YOLOv5 v4.0-104-gefa4946 torch 1.8.0+cu101 CUDA:0 (Tesla T4, 15109.75MB)
+
+[2021-03-22 03:05:32,478][__main__][INFO] - {'weights': 'yolov5s.pt', 'cfg': './models/./yolov5x.yaml', 'data': './data/./data.yaml', 'hyp': 'data/hyp.scratch.yaml', 'epochs': 5, 'batch_size': 16, 'img_size': [640, 640], 'world_size': 1, 'global_rank': -1, 'resume': False, 'name': 'test_yolov5x', 'evolve': False, 'project': 'runs/train', 'exist_ok': False, 'save_dir': 'runs/train/test_yolov5x48', 'total_batch_size': 16, 'device': '', 'local_rank': -1, 'single_cls': False, 'adam': False, 'linear_lr': False, 'sync_bn': False, 'cache_images': False, 'rect': False, 'workers': 8, 'image_weights': False, 'quad': False, 'noautoanchor': False, 'multi_scale': False, 'notest': False, 'bucket': '', 'nosave': False}
+[2021-03-22 03:05:32,479][__main__][INFO] - [34m[1mwandb: [0mInstall Weights & Biases for YOLOv5 logging with 'pip install wandb' (recommended)
+[2021-03-22 03:05:32,480][__main__][INFO] - Start Tensorboard with "tensorboard --logdir runs/train", view at http://localhost:6006/
+[2021-03-22 03:05:33,959][__main__][INFO] - [34m[1mhyperparameters: [0mlr0=0.01, lrf=0.2, momentum=0.937, weight_decay=0.0005, warmup_epochs=3.0, warmup_momentum=0.8, warmup_bias_lr=0.1, box=0.05, cls=0.5, cls_pw=1.0, obj=1.0, obj_pw=1.0, iou_t=0.2, anchor_t=4.0, fl_gamma=0.0, hsv_h=0.015, hsv_s=0.7, hsv_v=0.4, degrees=0.0, translate=0.1, scale=0.5, shear=0.0, perspective=0.0, flipud=0.0, fliplr=0.5, mosaic=1.0, mixup=0.0
+[2021-03-22 03:05:37,767][models.yolo][INFO] - Overriding model.yaml nc=80 with nc=6
+[2021-03-22 03:05:37,767][models.yolo][INFO] - 
+                 from  n    params  module                                  arguments                     
+[2021-03-22 03:05:37,770][models.yolo][INFO] -   0                -1  1      8800  models.common.Focus                     [3, 80, 3]                    
+[2021-03-22 03:05:37,772][models.yolo][INFO] -   1                -1  1    115520  models.common.Conv                      [80, 160, 3, 2]               
+[2021-03-22 03:05:37,780][models.yolo][INFO] -   2                -1  1    309120  models.common.C3                        [160, 160, 4]                 
+[2021-03-22 03:05:37,784][models.yolo][INFO] -   3                -1  1    461440  models.common.Conv                      [160, 320, 3, 2]              
+[2021-03-22 03:05:37,823][models.yolo][INFO] -   4                -1  1   3285760  models.common.C3                        [320, 320, 12]                
+[2021-03-22 03:05:37,839][models.yolo][INFO] -   5                -1  1   1844480  models.common.Conv                      [320, 640, 3, 2]              
+[2021-03-22 03:05:37,968][models.yolo][INFO] -   6                -1  1  13125120  models.common.C3                        [640, 640, 12]                
+[2021-03-22 03:05:38,042][models.yolo][INFO] -   7                -1  1   7375360  models.common.Conv                      [640, 1280, 3, 2]             
+[2021-03-22 03:05:38,082][models.yolo][INFO] -   8                -1  1   4099840  models.common.SPP                       [1280, 1280, [5, 9, 13]]      
+[2021-03-22 03:05:38,258][models.yolo][INFO] -   9                -1  1  19676160  models.common.C3                        [1280, 1280, 4, False]        
+[2021-03-22 03:05:38,267][models.yolo][INFO] -  10                -1  1    820480  models.common.Conv                      [1280, 640, 1, 1]             
+[2021-03-22 03:05:38,268][models.yolo][INFO] -  11                -1  1         0  torch.nn.modules.upsampling.Upsample    [None, 2, 'nearest']          
+[2021-03-22 03:05:38,268][models.yolo][INFO] -  12           [-1, 6]  1         0  models.common.Concat                    [1]                           
+[2021-03-22 03:05:38,326][models.yolo][INFO] -  13                -1  1   5332480  models.common.C3                        [1280, 640, 4, False]         
+[2021-03-22 03:05:38,329][models.yolo][INFO] -  14                -1  1    205440  models.common.Conv                      [640, 320, 1, 1]              
+[2021-03-22 03:05:38,330][models.yolo][INFO] -  15                -1  1         0  torch.nn.modules.upsampling.Upsample    [None, 2, 'nearest']          
+[2021-03-22 03:05:38,330][models.yolo][INFO] -  16           [-1, 4]  1         0  models.common.Concat                    [1]                           
+[2021-03-22 03:05:38,347][models.yolo][INFO] -  17                -1  1   1335040  models.common.C3                        [640, 320, 4, False]          
+[2021-03-22 03:05:38,354][models.yolo][INFO] -  18                -1  1    922240  models.common.Conv                      [320, 320, 3, 2]              
+[2021-03-22 03:05:38,355][models.yolo][INFO] -  19          [-1, 14]  1         0  models.common.Concat                    [1]                           
+[2021-03-22 03:05:38,404][models.yolo][INFO] -  20                -1  1   4922880  models.common.C3                        [640, 640, 4, False]          
+[2021-03-22 03:05:38,435][models.yolo][INFO] -  21                -1  1   3687680  models.common.Conv                      [640, 640, 3, 2]              
+[2021-03-22 03:05:38,435][models.yolo][INFO] -  22          [-1, 10]  1         0  models.common.Concat                    [1]                           
+[2021-03-22 03:05:38,630][models.yolo][INFO] -  23                -1  1  19676160  models.common.C3                        [1280, 1280, 4, False]        
+[2021-03-22 03:05:38,632][models.yolo][INFO] -  24      [17, 20, 23]  1     74019  models.yolo.Detect                      [6, [[10, 13, 16, 30, 33, 23], [30, 61, 62, 45, 59, 119], [116, 90, 156, 198, 373, 326]], [320, 640, 1280]]
+[2021-03-22 03:05:39,942][utils.torch_utils][INFO] - Model Summary: 607 layers, 87278019 parameters, 87278019 gradients, 217.4 GFLOPS
+[2021-03-22 03:05:39,942][models.yolo][INFO] - 
+[2021-03-22 03:05:40,098][__main__][INFO] - Transferred 59/794 items from yolov5s.pt
+[2021-03-22 03:05:40,100][__main__][INFO] - Scaled weight_decay = 0.0005
+[2021-03-22 03:05:40,103][__main__][INFO] - Optimizer groups: 134 .bias, 134 conv.weight, 131 other
+[2021-03-22 03:05:48,362][__main__][INFO] - Image sizes 640 train, 640 test
+Using 2 dataloader workers
+Logging results to runs/train/test_yolov5x48
+Starting training for 5 epochs...
+[2021-03-22 03:05:48,366][__main__][INFO] - 
+     Epoch   gpu_mem       box       obj       cls     total   targets  img_size
+[2021-03-22 03:06:37,754][__main__][INFO] - 
+     Epoch   gpu_mem       box       obj       cls     total   targets  img_size
+[2021-03-22 03:07:10,621][__main__][INFO] - 
+     Epoch   gpu_mem       box       obj       cls     total   targets  img_size
+[2021-03-22 03:07:40,388][__main__][INFO] - 
+     Epoch   gpu_mem       box       obj       cls     total   targets  img_size
+[2021-03-22 03:08:09,702][__main__][INFO] - 
+     Epoch   gpu_mem       box       obj       cls     total   targets  img_size
+[2021-03-22 03:08:44,536][__main__][INFO] - 5 epochs completed in 0.049 hours.
+
