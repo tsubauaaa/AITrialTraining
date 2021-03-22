@@ -2,19 +2,19 @@
 SageMakerにテキスト要約の独自モデル(transformersのAutoModelForSeq2SeqLM)をデプロイして、リクエストする。
 
 
-### source_dir/entry_point.py
+### [source_dir/entry_point.py](./source_dir/entry_point.py)
 transformersのAutoModelForSeq2SeqLMを用いて、リクエストされたAmazonレビューテキスト(英語)を要約して返却する。SageMaker推論エンドポイントで実行されるように必要な関数が書かれている
 
-### source_dir/test.py
+### [source_dir/test.py](./source_dir/test.py)
 source_dir/entry_point.pyのテストコード
 
-### source_dir/args.json
+### [source_dir/args.json](./source_dir/args.json)
 transformersのAutoModelForSeq2SeqLMが使う各種パラメータファイル。source_dir/entry_point.pyが使用する
 
-### inference_test.py
+### [inference_test.py](./inference_test.py)
 作成したSageMakerエンドポイントにリクエストする
 
-### AITraining7.ipynb
+### [AITraining7.ipynb](./AITraining7.ipynb)
 SageMaker PyTorchModelを作成し、推論インスタンスをデプロイする。その後、inference_test.pyを実行して、推論をテストする
 
 ### 推論結果 (例)
