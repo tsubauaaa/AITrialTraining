@@ -14,7 +14,7 @@ DataAugmentationのdegreesは (10, 5.0, 0.0)に変更
 ### [config/config.yaml](./config/config.yaml)
 [train_mlflow_hydra.py](./train_mlflow_hydra.py)と[train_mlflow_hydra_da_change.py](./train_mlflow_hydra_da_change.py)が読み込む学習パラメータファイル
 
-### [AITraining2.ipnb](./AITraining2.ipnb)
+### [AITraining2.ipynb](./AITraining2.ipynb)
 [train_mlflow_hydra.py](./train_mlflow_hydra.py)と[train_mlflow_hydra_da_change.py](./train_mlflow_hydra_da_change.py)を使って、パラメータが、
 
 * DataAugmentation degrees: (1, 0.0, 45.0), epochs: 5, batch-size: 16
