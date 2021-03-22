@@ -6,4 +6,4 @@ $ pip install -r requirements.txt`
 $ python main.app
 ```
 ### デモ
-![Demo](https://github.com/tsubauaaa/AITrialTraining/blob/master/Training5/web/demo.gif)
+![Demo](https://github.com/tsubauaaa/AITrialTraining/blob/main/Training5/web/demo.gif)
