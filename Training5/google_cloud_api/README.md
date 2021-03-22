@@ -12,11 +12,11 @@ Vision APIを使って、ある名刺の画像から文字列と文字列境界�
 リアルタイムに音声をテキストとして標準出力する
 
 ### 実行結果
-* 動物の検出結果(object_localization.py)
+* 動物の検出結果([object_localization.py](./object_localization.py))  
 
     ![animal](./rect.png)  
 
-* 名刺の文字列抽出(text_detection.py)  
+* 名刺の文字列抽出([text_detection.py](./text_detection.py))  
 読み込んだ画像  
 ![card](./images/business-card_example.png)  
 文字列抽出結果  
@@ -31,6 +31,6 @@ Vision APIを使って、ある名刺の画像から文字列と文字列境界�
     E-mail:info@k1-print.co.jp
     URL:http://www.kl-print.co.jp
     ```
-* 音声->テキスト出力(speech_to_text.py)
+* 音声->テキスト出力([speech_to_text.py](./speech_to_text.py))  
 ![speech2text](https://github.com/tsubauaaa/AITrialTraining/blob/main/Training5/google_cloud_api/speech-to-text-demo.gif)  
 ※ 上の動画では声出してます
