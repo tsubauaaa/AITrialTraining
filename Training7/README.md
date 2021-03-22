@@ -21,4 +21,4 @@ SageMaker PyTorchModelを作成し、推論インスタンスをデプロイす�
 |  Text (Request)  |  Summary (Response)  |
 | ---- | ---- |
 | Pathetic design of the caps. Very impractical to use everyday. The caps close so tight that everyday we have to wrestle with the bottle to open the cap. With a baby in one hand opening the cap is a night mare. And on top of these extra ordinary features of super secure cap, they are so expensive when compared to other brands. Stay away from these until they fix the cap issues. We have hurt ourselves many time trying to open caps as they have sharp edges on the inner and outer edges. Not worth the price. | As a mother of a newborn baby, I have to say that the bottle caps on some of the baby bottles are a bit of a let down |
-実際のリクエスト実施はAITraining7.ipynbを参照
+※ 実際のリクエスト実施はAITraining7.ipynbを参照
