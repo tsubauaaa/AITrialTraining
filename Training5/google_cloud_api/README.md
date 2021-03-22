@@ -13,7 +13,8 @@ Vision APIを使って、ある名刺の画像から文字列と文字列境界�
 
 ### 実行結果
 * 動物の検出結果(object_localization.py)
-![animal](./rect.png)  
+
+    ![animal](./rect.png)  
 
 * 名刺の文字列抽出(text_detection.py)  
 読み込んだ画像  
