@@ -22,3 +22,6 @@ $ curl -X POST "http://servername:8000/predict" -F file=@./static/images/upload/
 ```
 $ docker system prune -f
 ```
+
+#### デモ
+EC2で実行してcurlしてresult.jpgをopenするgifでもおくか
