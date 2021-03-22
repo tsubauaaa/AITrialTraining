@@ -16,7 +16,7 @@ $ docker-compose up -d --build
 ```
 $ curl -X POST "http://servername:8000/predict" -F file=@./static/images/upload/dice-example4.jpg -H 'Authorization: Bearer token' -o ./result.jpg
 ```
-*`servername`は実行環境がlocalかクラウドかで異なります
+※ `servername`は実行環境がlocalかクラウドかで異なります
 
 #### 不要なDockerコンポーネントを削除
 ```
