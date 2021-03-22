@@ -3,7 +3,8 @@ Googleのモデルを盗んでみる
 認証機能をつけたサイコロ認識API
 
 ### [google/](./google/)
-
+Googleのモデルを盗んでみる  
+Vision APIのオブジェクト検出APIでKaggleのAnimal10画像の分類を行い、その分類結果からAnimal10のVision APIバージョンのラベルを作成
 
 
 ### [dice_api/](./dice_api/)
