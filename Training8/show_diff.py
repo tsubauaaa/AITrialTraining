@@ -56,7 +56,7 @@ print("Inferring")
 i = 0
 model_new.eval()
 model_old.eval()
-for data in dataloaders["train"]:
+for data in dataloaders["val"]:
     # if i == 1000:
     #     break
     inputs, labels = data  # ImageFolderで作成したデータは、データをラベルを持ってくれます。
