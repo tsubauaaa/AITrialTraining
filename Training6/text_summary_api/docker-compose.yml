@@ -2,7 +2,7 @@ version: "3.0"
 
 services:
   api:
-    container_name: "dice"
+    container_name: "text_summary"
     build: .
     restart: always
     tty: true

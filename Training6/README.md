@@ -1,6 +1,7 @@
 ## 課題6
 Googleのモデルを盗んでみる  
-認証機能をつけたサイコロ認識API
+EC2でサイコロ認識APIをデプロイ
+Fargateでテキスト要約APIをデプロイ(API Gateway + Cognito)
 
 ### [google/](./google/)
 Googleのモデルを盗んでみる  
@@ -8,6 +9,12 @@ Vision APIのオブジェクト検出APIでKaggleのAnimal10画像の分類を�
 
 
 ### [dice_api/](./dice_api/)
-認証機能をつけたサイコロ認識API
+EC2でサイコロ認識APIをデプロイ
 画像をPostするとその画像内にあるサイコロを検出する画像を返すAPI。実行はlocal、Dockerどちらでも可能。リクエストには認証トークンが必要
-EC2で実行してアクセスして確認する
+EC2にデプロイしてアクセスして確認する
+
+
+### [text_summary_api/](./text_summary_api/)
+Fargateでテキスト要約APIをデプロイ(API Gateway + Cognito)
+テキストをリクエストすると要約したテキストを返すAPI。実行はlocal、Dockerどちらでも可能。
+FargateにデプロイしてAPI GatewayのAuthorizerを付けて、アクセスして確認する

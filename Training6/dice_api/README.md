@@ -1,6 +1,7 @@
 ### 認証機能をつけたサイコロ認識API
+EC2でサイコロ認識APIをデプロイ
 画像をPostするとその画像内にあるサイコロを検出する画像を返すAPI。実行はlocal、Dockerどちらでも可能。リクエストには認証トークンが必要
-EC2で実行してアクセスして確認する
+EC2にデプロイしてアクセスして確認する
 
 #### localで実行する場合
 ```
@@ -15,7 +16,7 @@ $ docker-compose up -d --build
 
 #### api requestをcurlで試す場合
 ```
-$ curl -X POST "http://servername:8000/predict" -F file=@./static/images/upload/dice-example4.jpg -H 'Authorization: Bearer token' -o ./result.jpg
+$ curl -X POST "http://servername:8001/predict" -F file=@./static/images/upload/dice-example4.jpg -H 'Authorization: Bearer token' -o ./result.jpg
 ```
 ※ `servername`は実行環境がlocalかクラウドかで異なります
 

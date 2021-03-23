@@ -1,0 +1,6 @@
+torch
+transformers==4.3.3
+numpy==1.19.5
+datasets
+fastapi
+uvicorn
