@@ -11,4 +11,4 @@ predict : 0.35329795299469297, match: 466, tested_num: 1319
 ```
 テストケース1319のうち正解数466の精度35%だった
 
-※ 実際のプログラム実施はAITraining3.ipynbを参照
+※ 実際のプログラム実施は[AITraining3.ipynb](./AITraining3.ipynb)を参照
