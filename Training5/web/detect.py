@@ -26,6 +26,9 @@ from utils.general import (
 from utils.plots import plot_one_box
 from utils.torch_utils import load_classifier, select_device, time_synchronized
 
+# Load model
+model = attempt_load("weights/last.pt", map_location="cpu")  # load FP32 model
+
 
 def detect(config, save_img=False):
     out, source, weights, view_img, save_txt, imgsz = (
@@ -50,8 +53,8 @@ def detect(config, save_img=False):
     os.makedirs(out)
     half = device.type != "cpu"  # half precision only supported on CUDA
 
-    # Load model
-    model = attempt_load(weights, map_location=device)  # load FP32 model
+    # # Load model
+    # model = attempt_load(weights, map_location=device)  # load FP32 model
     stride = int(model.stride.max())  # model stride
     imgsz = check_img_size(imgsz, s=stride)  # check img_size
     if half:
