@@ -1,5 +1,6 @@
 ### 認証機能をつけたサイコロ認識API
 画像をPostするとその画像内にあるサイコロを検出する画像を返すAPI。実行はlocal、Dockerどちらでも可能。リクエストには認証トークンが必要
+EC2で実行してアクセスして確認する
 
 #### localで実行する場合
 ```
@@ -24,4 +25,6 @@ $ docker system prune -f
 ```
 
 #### デモ
-EC2で実行してcurlしてresult.jpgをopenするgifでもおくか
+このAPIをEC2(ec2-52-195-9-43.ap-northeast-1.compute.amazonaws.com)上で実行して、サイコロ画像をPOSTしてラベルと検出境界線が書かれた画像を取得するデモ
+
+![Demo](https://github.com/tsubauaaa/AITrialTraining/blob/main/Training6/dice_api/demo.gif)

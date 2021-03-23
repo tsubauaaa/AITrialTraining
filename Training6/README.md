@@ -10,3 +10,4 @@ Vision APIのオブジェクト検出APIでKaggleのAnimal10画像の分類を�
 ### [dice_api/](./dice_api/)
 認証機能をつけたサイコロ認識API
 画像をPostするとその画像内にあるサイコロを検出する画像を返すAPI。実行はlocal、Dockerどちらでも可能。リクエストには認証トークンが必要
+EC2で実行してアクセスして確認する
