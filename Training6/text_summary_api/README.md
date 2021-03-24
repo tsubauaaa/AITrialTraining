@@ -30,7 +30,7 @@ Fargateにテキスト要約APIをデプロイする際の構成やAPI Gateway�
 
 ##### Authorizerのトークンを取得する
 ```
-$ aws cognito-idp admin-initiate-auth --user-pool-id ap-northeast-1_AbNe5La9Z --client-id 3oco5uqm9iatihv56c60d805om --auth-flow ADMIN_NO_SRP_AUTH --auth-parameters USERNAME=ts-hirota,PASSWORD=******
+$ aws cognito-idp admin-initiate-auth --user-pool-id ap-northeast-1_************ --client-id ************ --auth-flow ADMIN_NO_SRP_AUTH --auth-parameters USERNAME=ts-hirota,PASSWORD=******
 ```
 レスポンス
 ```
