@@ -69,6 +69,7 @@ $ curl -X POST -H "Content-Type: application/json" -H 'Authorization: Bearer "**
 ![Demo](https://github.com/tsubauaaa/AITrialTraining/blob/main/Training6/text_summary_api/demo.gif)
 
 ##### AWS構成
+AWSとしては、ECS(Fargate), NLB(target group), API Gateway, Cognitoを使っている
 * ECS(Fargate)  
     クラスタを作ってこのAPIのサービスを定義
     ![Fargate](./materials/fargate.png)  
