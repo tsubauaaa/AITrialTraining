@@ -28,7 +28,7 @@ $ docker system prune -f
 Fargateにテキスト要約APIをデプロイする際の構成やAPI GatewayのAuthorizerの構成などを記載する  
 また、Fargate上のAPIにアクセスして確認する
 
-##### Authorizerのトークン取得する
+##### Authorizerのトークンを取得する
 ```
 $ aws cognito-idp admin-initiate-auth --user-pool-id ap-northeast-1_AbNe5La9Z --client-id 3oco5uqm9iatihv56c60d805om --auth-flow ADMIN_NO_SRP_AUTH --auth-parameters USERNAME=ts-hirota,PASSWORD=******
 ```
@@ -56,8 +56,9 @@ $ curl -X POST -H "Content-Type: application/json" -H 'Authorization: Bearer "**
 "As a mother of a newborn baby, I have to say that the bottle caps on some of the baby bottles are a bit of a let down."
 ```
 
-#### デモ
-このAPIをFargate上で実行して、API Gateway(https://2r61vfii5l.execute-api.ap-northeast-1.amazonaws.com/dev/)経由でアクセスする  
+##### デモ
+このAPIをFargate上で実行して、API Gateway(https://2r61vfii5l.execute-api.ap-northeast-1.amazonaws.com/dev/)
+経由でアクセスする  
 デモでは、最初にAuthorizationヘッダーなしでアクセスする  
 すると以下のように認証エラーが帰ってくる
 ```
@@ -66,3 +67,9 @@ $ curl -X POST -H "Content-Type: application/json" -H 'Authorization: Bearer "**
 次にAuthorizationヘッダーを付けてアクセスして、要約結果を受け取る
 
 ![Demo](https://github.com/tsubauaaa/AITrialTraining/blob/main/Training6/text_summary_api/demo.gif)
+
+##### AWS構成
+* ECS(Fargate)
+
+
+* API Gateway
