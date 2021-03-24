@@ -62,7 +62,7 @@ $ curl -X POST -H "Content-Type: application/json" -H 'Authorization: Bearer "**
 デモでは、最初にAuthorizationヘッダーなしでアクセスする  
 すると以下のように認証エラーが帰ってくる
 ```
-{"message":"Unauthorized"}%
+{"message":"Unauthorized"}
 ```
 次にAuthorizationヘッダーを付けてアクセスして、要約結果を受け取る
 
