@@ -69,7 +69,10 @@ $ curl -X POST -H "Content-Type: application/json" -H 'Authorization: Bearer "**
 ![Demo](https://github.com/tsubauaaa/AITrialTraining/blob/main/Training6/text_summary_api/demo.gif)
 
 ##### AWS構成
-* ECS(Fargate)
+* ECS(Fargate)  
+    クラスタを作ってこのAPIのサービスを定義
+    ![Fargate](./materials/fargate.png)  
 
-
-* API Gateway
+* API Gateway  
+    POSTメソッドにCognito User PoolのAuthorizerを設定
+    ![apigw](./materials/apigw.png)  
