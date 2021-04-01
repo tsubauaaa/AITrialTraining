@@ -52,3 +52,12 @@
     macro avg       0.70      0.70      0.70       289
     weighted avg       0.71      0.70      0.70       289
     ```
+
+### 課題2
+wav2vecモデルから特徴量を作成し、LSTMを使用して感情を分類する
+
+#### [AITraining10-2.ipynb](./AITraining10-2.ipynb)
+課題2を実施したプログラムコード
+
+#### 結果
+Work in progress
