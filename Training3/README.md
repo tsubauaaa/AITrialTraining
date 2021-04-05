@@ -7,10 +7,11 @@ Amazonレビュー(日本語)をMeCabで形態素解析して、word2vecでベ�
 回帰結果とGround Truthとの平均絶対誤差も求める
 ### 推論結果
 ```
-Correct answer rate: 0.3368660105980318, match: 445, tested_num: 1321
-Mean Absolute Error: 1.2965448602503848
+Correct answer rate: 0.358683314415437, match: 316, tested_num: 881
+Mean Absolute Error: 0.9054456292382028
 ```
-テストケース1321のうち正答数445の正答率33%ほどだった  
-回帰結果とGround Truthとの平均絶対誤差は1.3ほどだった
+テストケース881のうち正答数316の正答率36%ほどだった  
+回帰結果とGround Truthとの平均絶対誤差は0.9ほどだった
+バッチとパディングを対応すると正答率33->36%、平均絶対誤差1.3->0.9とどちらも良くなった
 
 ※ 実際のプログラム実施は[AITraining3.ipynb](./AITraining3.ipynb)を参照
